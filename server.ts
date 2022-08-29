@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   console.log('reload page');
   fs.readFile(__dirname + "/index.html", "utf-8", (err, data) => {
-    console.log(data.length);
+    console.log("original length", data.length);
     const minFile = minify(data, {
       removeAttributeQuotes: true,
       collapseWhitespace: true,
@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
       minifyJS: true,
       removeTagWhitespace: true,
     });
+    console.log("minify length", minFile.length);
     fs.writeFile(__dirname + "/index.min.html", minFile, () => {
       res.sendFile(__dirname + "/index.min.html");
     })

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lab calc</title>
+  <style>
+      html {
+          height: 100%;
+      }
+
+      body {
+          background: #b6b6b6;
+          height: 100%;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+
+          font-family: Arial sans-serif;
+      }
+
+      #content {
+          border: 3px dashed red;
+          height: 100%;
+          background: #80ffff;
+          display: flex;
+          flex-direction: column;
+          row-gap: 20px;
+
+          padding: 20px;
+      }
+
+      #buttons {
+          border: 2px dashed black;
+          background: darkseagreen;
+          height: 300px;
+
+      }
+
+      #input_param {
+          display: flex;
+          border: 1px dashed red;
+          /*align-content: center;*/
+          justify-content: center;
+          column-gap: 20px;
+      }
+
+      #param_name {
+          border: 1px dashed black;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-direction: row;
+          font-size: 40px;
+      }
+
+      #input_x {
+          font-size: 35px;
+          width: 300px;
+          height: 50px;
+      }
+
+      .name_and_result {
+          display: flex;
+      }
+
+      .name {
+          width: 40px;
+      }
+
+      .result {
+          border: 2px dashed black;
+          background: #b6b6b6;
+          width: 150px;
+      }
+
+      table {
+          border: 1px solid black;
+      }
+
+      tr {
+          border: 1px solid red;
+      }
+
+      td {
+          border: 1px solid green;
+      }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <div id="input_param">
+      <div id="param_name">X =</div>
+      <input type="number" id="input_x" value="">
+    </div>
+
+    <table>
+      <tr>
+        <td>
+          <div class="name_and_result">
+            <div class="name">Н16</div>
+            <div class="result" id="h16_result"></div>
+          </div>
+        </td>
+        <td>
+          <div class="name_and_result">
+            <div class="name">Н4</div>
+            <div class="result" id="h4_result"></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name_and_result">
+            <div class="name">Н2</div>
+            <div class="result" id="h2_result"></div>
+          </div>
+        </td>
+        <td>
+          <div class="name_and_result">
+            <div class="name">Н1</div>
+            <div class="result" id="h1_result"></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+  <!--  <div id="buttons">-->
+  <!--  </div>-->
+
+  <!--  <table id="buttons">-->
+  <!--    <tr>-->
+  <!--      <td>0</td>-->
+  <!--      <td>1</td>-->
+  <!--      <td>2</td>-->
+  <!--      <td>3</td>-->
+  <!--      <td>4</td>-->
+  <!--      <td>x</td>-->
+  <!--    </tr>-->
+  <!--    <tr>-->
+  <!--      <td>5</td>-->
+  <!--      <td>6</td>-->
+  <!--      <td>7</td>-->
+  <!--      <td>8</td>-->
+  <!--      <td>9</td>-->
+  <!--      <td>x</td>-->
+  <!--    </tr>-->
+  <!--  </table>-->
+
+</body>
+<script>
+
+  const calculate = () => {
+    const input_x_value = document.getElementById("input_x").value;
+    console.log(input_x_value)
+
+    document.getElementById("h16_result").innerText = (input_x_value * 16 * 0.031).toString();
+    document.getElementById("h4_result").innerText = (input_x_value * 4 * 0.031).toString();
+    document.getElementById("h2_result").innerText = (input_x_value * 2 * 0.031).toString();
+    document.getElementById("h1_result").innerText = (input_x_value * 1 * 0.031).toString();
+  }
+
+  document.getElementById("input_x").addEventListener("input", calculate)
+
+  calculate();
+
+</script>
+</html>

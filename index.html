@@ -22,9 +22,10 @@
           margin: 0;
           display: flex;
           flex-direction: column;
+          align-items: center;
       }
 
-      #content {
+      .content {
           height: 100%;
           background: #e0e0e0;
           display: flex;
@@ -82,11 +83,24 @@
           background: #e0e0e0;
           padding: 2px;
       }
+
+
+      .version {
+          position: absolute;
+          top: 3px;
+          right: 3px;
+          display: flex;
+          column-gap: 5px;
+          font-size: 10px;
+          color: #c0c0c0;
+          align-items: center;
+          text-decoration: none;
+      }
   </style>
 </head>
 <body>
 
-  <div id="content">
+  <div class="content">
     <div class="input_param">
       <div class="param_name">X =</div>
       <input type="number" id="input_x" class="input_field" value="">
@@ -177,6 +191,11 @@
       </tr>
     </table>
   </div>
+
+  <a class="version" href="https://github.com/Alex-1701/lab_calc" target="_blank">
+    lab calc v1.0.1
+  </a>
+
 </body>
 <script>
 
@@ -201,7 +220,7 @@
     const b = document.getElementById("input_b").value;
 
     if (a && b) {
-      document.getElementById("KA_result").value = ((a - b) / b).toFixed(3);
+      document.getElementById("KA_result").value = ((a - b) / b).toFixed(0);
     } else {
       document.getElementById("KA_result").value = "";
     }
@@ -209,6 +228,8 @@
 
   document.getElementById("input_a").addEventListener("input", calculate_KA)
   document.getElementById("input_b").addEventListener("input", calculate_KA)
+
+  // calculate_KA()
 
 </script>
 </html>

@@ -1,6 +1,6 @@
 {
-  "name": "course-work-be",
-  "version": "1.0.0",
+  "name": "lab_calc",
+  "version": "1.0.1",
   "description": "",
   "main": "server.ts",
   "scripts": {

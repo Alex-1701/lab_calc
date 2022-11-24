@@ -1,33 +1,54 @@
-const redraw = () => {
+const menuState = {
+  menu: "menu",
+  Nichiporenko: "Nichiporenko_calculator",
+  SMG: "SMG_calculator",
+  LPNP: "LPNP_calculator",
+  Fibrinogen: "Fibrinogen_calculator",
+  menuButton: "menu_button",
 
-}
-
-const visibilityState = {
-  menu: true,
-  Nichiporenko: false,
-  SMG: false,
-  LPNP: false,
-  Fibrinogen: false,
-
-  setNichiporenko: () => {
-    this.Nichiporenko = true;
+  showNichiporenko() {
+    document.getElementById(this.Nichiporenko).style.display = "flex";
+    this.hideMenu();
   },
 
-  setSMG: () => {
-    this.SMG = true;
+  showSMG() {
+    document.getElementById(this.SMG).style.display = "flex";
+    this.hideMenu();
   },
 
-  setLPNP: () => {
-    this.LPNP = true;
+  showLPNP() {
+    document.getElementById(this.LPNP).style.display = "flex";
+    this.hideMenu();
   },
 
-  setFibrinogen: () => {
-    this.Fibrinogen = true;
+  showFibrinogen() {
+    document.getElementById(this.Fibrinogen).style.display = "flex";
+    this.hideMenu();
   },
 
-  setMenu: () => {
-    this.menu = true;
+  hideMenu() {
+    document.getElementById(this.menuButton).style.display = "flex";
+    document.getElementById(this.menu).style.display = "none";
   },
+
+  showMenu() {
+    document.getElementById(this.Nichiporenko).style.display = "none";
+    document.getElementById(this.SMG).style.display = "none";
+    document.getElementById(this.LPNP).style.display = "none";
+    document.getElementById(this.Fibrinogen).style.display = "none";
+    document.getElementById(this.menu).style.display = "flex";
+    document.getElementById(this.menuButton).style.display = "none";
+
+    this.clearAllInputs();
+  },
+
+  clearAllInputs() {
+    const inputs = document.getElementsByTagName("input");
+
+    for (const input of inputs) {         
+      input.value = "";
+    }
+  }
 }
 
 // Ничипоренко

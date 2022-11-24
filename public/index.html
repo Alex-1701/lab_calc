@@ -14,14 +14,16 @@
 <body>
 
   <div class="content">
-    <!-- Меню  -->
-    <div>
-      <button onclick="visibilityState.setNichiporenko()">Ничипоренко</button>
-      <button onclick="visibilityState.setSMG()">СМЖ</button>
-      <button onclick="visibilityState.setLPNP()">ЛПНП</button>
-      <button onclick="visibilityState.setFibrinogen()">Фибриноген</button>
+
+    <!--  Меню  -->
+    <div id="menu">
+      <button onclick="menuState.showNichiporenko()">Ничипоренко</button>
+      <button onclick="menuState.showSMG()">СМЖ</button>
+      <button onclick="menuState.showLPNP()">ЛПНП</button>
+      <button onclick="menuState.showFibrinogen()">Фибриноген</button>
     </div>
     <!--  *********************  -->
+
 
     <!--  Ничипоренко  -->
     <div class="calculator" id="Nichiporenko_calculator">
@@ -144,6 +146,7 @@
     </div>
     <!--  *********************  -->
 
+
     <!--  Фибриноген  -->
     <div class="calculator" id="Fibrinogen_calculator">
       <div class="input_param">
@@ -168,9 +171,10 @@
     <!--  *********************  -->
 
 
-    <div>
-      <button onclick="visibilityState.setMenu()">Меню</button>
-    </div>
+    <!--  Кнопка назад  -->
+    <button onclick="menuState.showMenu()" id="menu_button">Меню</button>
+    <!--  *********************  -->
+    
   </div>
 
   <a class="version" href="https://github.com/Alex-1701/lab_calc" target="_blank">

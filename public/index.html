@@ -14,95 +14,163 @@
 <body>
 
   <div class="content">
-    <div class="input_param">
-      <div class="param_name">X =</div>
-      <input type="number" id="input_x" class="input_field" value="">
+    <!-- Меню  -->
+    <div>
+      <button onclick="visibilityState.setNichiporenko()">Ничипоренко</button>
+      <button onclick="visibilityState.setSMG()">СМЖ</button>
+      <button onclick="visibilityState.setLPNP()">ЛПНП</button>
+      <button onclick="visibilityState.setFibrinogen()">Фибриноген</button>
     </div>
+    <!--  *********************  -->
 
-    <table>
-      <tr>
-        <td>
-          <div class="name_and_result">
-            <div class="name">Н1</div>
-            <input type="number" disabled class="result" id="n1_result"/>
-          </div>
-        </td>
-        <td>
-          <div class="name_and_result">
-            <div class="name">Н2</div>
-            <input type="number" disabled class="result" id="n2_result"/>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="name_and_result">
-            <div class="name">Н4</div>
-            <input type="number" disabled class="result" id="n4_result"/>
-          </div>
-        </td>
-        <td>
-          <div class="name_and_result">
-            <div class="name">Н16</div>
-            <input type="number" disabled class="result" id="n16_result"/>
-          </div>
-        </td>
-      </tr>
-    </table>
-
-
-    <table>
-      <tr>
-        <td>
-          <div class="name_and_result">
-            <div class="name">А1</div>
-            <input type="number" disabled class="result" id="a1_result"/>
-          </div>
-        </td>
-        <td>
-          <div class="name_and_result">
-            <div class="name">А2</div>
-            <input type="number" disabled class="result" id="a2_result"/>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="name_and_result">
-            <div class="name">А4</div>
-            <input type="number" disabled class="result" id="a4_result"/>
-          </div>
-        </td>
-        <td>
-          <div class="name_and_result">
-            <div class="name">А16</div>
-            <input type="number" disabled class="result" id="a16_result"/>
-          </div>
-        </td>
-      </tr>
-    </table>
-
-
-    <div class="input_param">
-      <div class="param_name">A =</div>
-      <input type="number" id="input_a" class="input_field" value="">
+    <!--  Ничипоренко  -->
+    <div class="calculator" id="Nichiporenko_calculator">
+      <div class="input_param">
+        <div class="param_name">X =</div>
+        <input type="number" id="input_x" class="input_field" value="">
+      </div>
+      <table>
+        <tr>
+          <td>
+            <div class="name_and_result">
+              <div class="name">Н1</div>
+              <input type="number" disabled class="result" id="n1_result"/>
+            </div>
+          </td>
+          <td>
+            <div class="name_and_result">
+              <div class="name">Н2</div>
+              <input type="number" disabled class="result" id="n2_result"/>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name_and_result">
+              <div class="name">Н4</div>
+              <input type="number" disabled class="result" id="n4_result"/>
+            </div>
+          </td>
+          <td>
+            <div class="name_and_result">
+              <div class="name">Н16</div>
+              <input type="number" disabled class="result" id="n16_result"/>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td>
+            <div class="name_and_result">
+              <div class="name">А1</div>
+              <input type="number" disabled class="result" id="a1_result"/>
+            </div>
+          </td>
+          <td>
+            <div class="name_and_result">
+              <div class="name">А2</div>
+              <input type="number" disabled class="result" id="a2_result"/>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name_and_result">
+              <div class="name">А4</div>
+              <input type="number" disabled class="result" id="a4_result"/>
+            </div>
+          </td>
+          <td>
+            <div class="name_and_result">
+              <div class="name">А16</div>
+              <input type="number" disabled class="result" id="a16_result"/>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
+    <!--  *********************  -->
 
-    <div class="input_param">
-      <div class="param_name">B =</div>
-      <input type="number" id="input_b" class="input_field" value="">
+
+    <!--  СМЖ  -->
+    <div class="calculator" id="SMG_calculator">
+      <div class="input_param">
+        <div class="param_name">A =</div>
+        <input type="number" id="input_a" class="input_field" value="">
+      </div>
+      <div class="input_param">
+        <div class="param_name">B =</div>
+        <input type="number" id="input_b" class="input_field" value="">
+      </div>
+      <table>
+        <tr>
+          <td>
+            <div class="name_and_result">
+              <div class="name">КА</div>
+              <input type="number" disabled class="result" id="KA_result"/>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
+    <!--  *********************  -->
 
-    <table>
-      <tr>
-        <td>
-          <div class="name_and_result">
-            <div class="name">КА</div>
-            <input type="number" disabled class="result" id="KA_result"/>
-          </div>
-        </td>
-      </tr>
-    </table>
+
+    <!--  ЛПНП  -->
+    <div class="calculator" id="LPNP_calculator">
+      <div class="input_param">
+        <div class="param_name">ОХС =</div>
+        <input type="number" id="input_OXC" class="input_field" value="">
+      </div>
+      <div class="input_param">
+        <div class="param_name">ЛПВП =</div>
+        <input type="number" id="input_LPVP" class="input_field" value="">
+      </div>
+      <div class="input_param">
+        <div class="param_name">ТГ =</div>
+        <input type="number" id="input_TG" class="input_field" value="">
+      </div>
+      <table>
+        <tr>
+          <td>
+            <div class="name_and_result">
+              <div class="name">ЛПНП</div>
+              <input type="number" disabled class="result" id="LPNP_result"/>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--  *********************  -->
+
+    <!--  Фибриноген  -->
+    <div class="calculator" id="Fibrinogen_calculator">
+      <div class="input_param">
+        <div class="param_name">A =</div>
+        <input type="number" id="input_A2" class="input_field" value="">
+      </div>
+      <div class="input_param">
+        <div class="param_name">X =</div>
+        <input type="number" id="input_X2" class="input_field" value="">
+      </div>
+      <table>
+        <tr>
+          <td>
+            <div class="name_and_result">
+              <div class="name">F</div>
+              <input type="number" disabled class="result" id="F_result"/>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--  *********************  -->
+
+
+    <div>
+      <button onclick="visibilityState.setMenu()">Меню</button>
+    </div>
   </div>
 
   <a class="version" href="https://github.com/Alex-1701/lab_calc" target="_blank">

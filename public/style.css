@@ -13,10 +13,11 @@ body {
 }
 
 .content {
-    background: #e0e0e0;
+    /*background: #e0e0e0;*/
+    background: #bad1ef;
     display: flex;
     flex-direction: column;
-    row-gap: 18px;
+    /*row-gap: 18px;*/
     padding: 20px;
 }
 
@@ -80,4 +81,11 @@ td {
     color: #c0c0c0;
     align-items: center;
     text-decoration: none;
+}
+
+.calculator {
+    border: 3px dashed #1f1717;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
 }

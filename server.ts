@@ -3,9 +3,9 @@ import {networkInterfaces} from "os";
 
 const app = express()
 const port = 3000
-app.use(express.static('./'))
+app.use(express.static('./public'))
 
-app.get('/', (req, res) => {
+app.get('/', (req: any, res: any) => {
   res.send('Hello World!')
 })
 

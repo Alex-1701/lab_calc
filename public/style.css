@@ -1,0 +1,134 @@
+* {
+    font-family: sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #e0e0e0;
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    background: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 20px;
+}
+
+.input_param {
+    display: flex;
+}
+
+.param_name {
+    font-size: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 60px;
+}
+
+.input_field {
+    font-size: 15px;
+    width: calc(100% - 60px);
+}
+
+.name_and_result {
+    display: flex;
+    font-size: 15px;
+}
+
+.name {
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    min-width: 60px;
+    margin-left: 3px;
+}
+
+.result {
+    font-size: 20px;
+    background: white;
+    width: 100%;
+    color: black;
+    border: none;
+}
+
+table {
+    background: #949494;
+}
+
+td {
+    width: 50%;
+    background: #e0e0e0;
+    padding: 2px;
+}
+
+
+.version {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    column-gap: 5px;
+    font-size: 10px;
+    color: #c0c0c0;
+    align-items: center;
+    text-decoration: none;
+}
+
+.calculator {
+    flex-direction: column;
+    row-gap: 18px;
+    display: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 5px;
+}
+
+#menu > button {
+    font-size: 25px;
+    padding: 5px;
+    border: 2px solid gray;
+    border-radius: 7px;
+    background-color: #c7c7ff;
+}
+
+#menu_button {
+    display: none;
+    font-size: 25px;
+    padding: 5px;
+    justify-content: center;
+}
+
+#page_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    background: #c2c2c2;
+    height: 40px;
+    position: static;
+}
+
+#menu_icon {
+    position: absolute;
+    left: 0;
+    padding: 3px;
+    margin: 5px;
+    color: #282838;
+    cursor: pointer;
+}
+
+#page_title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

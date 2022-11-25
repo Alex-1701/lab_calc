@@ -13,6 +13,14 @@
 </head>
 <body>
 
+  <!--  Кнопка меню и заголовок  -->
+  <header id="page_header">
+    <img id="menu_icon" src="icons/menu.svg" onclick="menuState.showMenu()"/>
+    <div id="page_title">Меню</div>
+  </header>
+  <!--  *********************  -->
+
+
   <div class="content">
 
     <!--  Меню  -->
@@ -28,7 +36,7 @@
     <!--  Ничипоренко  -->
     <div class="calculator" id="Nichiporenko_calculator">
       <div class="input_param">
-        <div class="param_name">X =</div>
+        <div class="param_name">X</div>
         <input type="number" id="input_x" class="input_field" value="">
       </div>
       <table>
@@ -98,11 +106,11 @@
     <!--  СМЖ  -->
     <div class="calculator" id="SMG_calculator">
       <div class="input_param">
-        <div class="param_name">A =</div>
+        <div class="param_name">A</div>
         <input type="number" id="input_a" class="input_field" value="">
       </div>
       <div class="input_param">
-        <div class="param_name">B =</div>
+        <div class="param_name">B</div>
         <input type="number" id="input_b" class="input_field" value="">
       </div>
       <table>
@@ -122,15 +130,15 @@
     <!--  ЛПНП  -->
     <div class="calculator" id="LPNP_calculator">
       <div class="input_param">
-        <div class="param_name">ОХС =</div>
+        <div class="param_name">ОХС</div>
         <input type="number" id="input_OXC" class="input_field" value="">
       </div>
       <div class="input_param">
-        <div class="param_name">ЛПВП =</div>
+        <div class="param_name">ЛПВП</div>
         <input type="number" id="input_LPVP" class="input_field" value="">
       </div>
       <div class="input_param">
-        <div class="param_name">ТГ =</div>
+        <div class="param_name">ТГ</div>
         <input type="number" id="input_TG" class="input_field" value="">
       </div>
       <table>
@@ -150,11 +158,11 @@
     <!--  Фибриноген  -->
     <div class="calculator" id="Fibrinogen_calculator">
       <div class="input_param">
-        <div class="param_name">A =</div>
+        <div class="param_name">A</div>
         <input type="number" id="input_A2" class="input_field" value="">
       </div>
       <div class="input_param">
-        <div class="param_name">X =</div>
+        <div class="param_name">X</div>
         <input type="number" id="input_X2" class="input_field" value="">
       </div>
       <table>
@@ -170,11 +178,6 @@
     </div>
     <!--  *********************  -->
 
-
-    <!--  Кнопка назад  -->
-    <button onclick="menuState.showMenu()" id="menu_button">Меню</button>
-    <!--  *********************  -->
-    
   </div>
 
   <a class="version" href="https://github.com/Alex-1701/lab_calc" target="_blank">

@@ -14,7 +14,6 @@ body {
 
 .content {
     background: #e0e0e0;
-    /* background: #bad1ef; */
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -29,14 +28,12 @@ body {
     font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
-    display: block;
-    margin-right: 15px;
-    min-width: fit-content;
+    width: 80px;
 }
 
 .input_field {
     font-size: 25px;
-    width: 100%;
+    width: calc(100% - 80px);
 }
 
 .name_and_result {
@@ -106,4 +103,29 @@ td {
     font-size: 25px;
     padding: 5px;
     justify-content: center;
+}
+
+#page_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    background: #c2c2c2;
+    height: 40px;
+    position: static;
+}
+
+#menu_icon {
+    position: absolute;
+    left: 0;
+    padding: 3px;
+    margin: 5px;
+    color: #282838;
+    cursor: pointer;
+}
+
+#page_title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -25,15 +25,15 @@ body {
 }
 
 .param_name {
-    font-size: 25px;
+    font-size: 15px;
     margin-top: auto;
     margin-bottom: auto;
-    width: 80px;
+    width: 60px;
 }
 
 .input_field {
-    font-size: 25px;
-    width: calc(100% - 80px);
+    font-size: 15px;
+    width: calc(100% - 60px);
 }
 
 .name_and_result {
@@ -42,16 +42,16 @@ body {
 }
 
 .name {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: auto;
     margin-bottom: auto;
     display: block;
-    min-width: 45px;
+    min-width: 60px;
     margin-left: 3px;
 }
 
 .result {
-    font-size: 15px;
+    font-size: 20px;
     background: white;
     width: 100%;
     color: black;
@@ -96,6 +96,9 @@ td {
 #menu > button {
     font-size: 25px;
     padding: 5px;
+    border: 2px solid gray;
+    border-radius: 7px;
+    background-color: #c7c7ff;
 }
 
 #menu_button {

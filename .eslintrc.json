@@ -24,7 +24,6 @@
       "always"
     ],
     "@typescript-eslint/semi": "off",
-    //        "quotes": ["warn", "double"],
     "@typescript-eslint/quotes": [
       "warn",
       "double",

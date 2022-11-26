@@ -1,6 +1,7 @@
 {
   "name": "Laboratory Calculator",
-  "short_name": "lab calc",
+  "version": "2.0.0",
+  "short_name": "Lab Calc",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "fullScreen",

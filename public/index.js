@@ -40,7 +40,7 @@ const menuState = {
     document.getElementById(this.LPNP).style.display = "none";
     document.getElementById(this.Fibrinogen).style.display = "none";
     document.getElementById(this.menu).style.display = "flex";
-    document.getElementById(this.title).innerText = "Меню";
+    document.getElementById(this.title).innerText = "Lab Calc";
 
     this.clearAllInputs();
   },

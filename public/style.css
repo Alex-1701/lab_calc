@@ -16,58 +16,72 @@ body {
     background: #e0e0e0;
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 20px;
     padding: 20px;
+    align-items: center;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
 .input_param {
     display: flex;
 }
 
-.param_name {
-    font-size: 15px;
+.param_name, .result_name {
+    font-size: 20px;
+    
     margin-top: auto;
     margin-bottom: auto;
-    width: 60px;
+    width: 70px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.input_field, .result_field {
+    font-size: 20px;
+    width: 180px;
 }
 
 .input_field {
-    font-size: 15px;
-    width: calc(100% - 60px);
+    color: #434343;
+}
+
+.result_field{
+    background: white;
+    color: black;
+    border: none;
+    font-weight: 600;
+    text-align: right;
+    height: 27px;
 }
 
 .name_and_result {
     display: flex;
     font-size: 15px;
+    border: 2px solid gray;
+    width: fit-content;
 }
 
-.name {
-    font-size: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
-    display: block;
-    min-width: 60px;
-    margin-left: 3px;
-}
-
-.result {
-    font-size: 20px;
-    background: white;
-    width: 100%;
-    color: black;
-    border: none;
+.result_box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 
 table {
     background: #949494;
+    border-collapse: collapse;
 }
 
 td {
     width: 50%;
     background: #e0e0e0;
-    padding: 2px;
+    padding: 0;
 }
-
 
 .version {
     position: absolute;
@@ -82,7 +96,17 @@ td {
 
 .calculator {
     flex-direction: column;
-    row-gap: 18px;
+    row-gap: 25px;
+    display: none;
+}
+
+.Nichiporenko_results {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+#clear_button {
     display: none;
 }
 
@@ -98,7 +122,9 @@ td {
     padding: 5px;
     border: 2px solid gray;
     border-radius: 7px;
-    background-color: #c7c7ff;
+    background-color: #f2f2f2;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
 #menu_button {
@@ -117,13 +143,20 @@ td {
     position: static;
 }
 
-#menu_icon {
+#menu_icon, #delete_icon {
     position: absolute;
+    cursor: pointer;
+}
+
+#menu_icon {
     left: 0;
     padding: 3px;
     margin: 5px;
-    color: #282838;
-    cursor: pointer;
+}
+
+#delete_icon {
+    right: 0;
+    margin: 3px;
 }
 
 #page_title {
@@ -131,4 +164,6 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #515151;
+    font-weight: bold;
 }

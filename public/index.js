@@ -8,13 +8,13 @@ const menuState = {
 
   showNichiporenko() {
     document.getElementById(this.Nichiporenko).style.display = "flex";
-    document.getElementById(this.title).innerText = "Ничипоренко";
+    document.getElementById(this.title).innerText = "Нечипоренко";
     this.hideMenu();
   },
 
   showSMG() {
     document.getElementById(this.SMG).style.display = "flex";
-    document.getElementById(this.title).innerText = "СМГ";
+    document.getElementById(this.title).innerText = "КА";
     this.hideMenu();
   },
 

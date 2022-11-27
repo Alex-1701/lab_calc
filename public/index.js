@@ -1,6 +1,6 @@
 const menuState = {
   menu: "menu",
-  Nichiporenko: "Nichiporenko_calculator",
+  Nichiporenko: "Nechiporenko_calculator",
   SMG: "SMG_calculator",
   LPNP: "LPNP_calculator",
   Fibrinogen: "Fibrinogen_calculator",
@@ -54,9 +54,9 @@ const menuState = {
   }
 }
 
-// Ничипоренко
+// Нечипоренко
 const calculate_N = () => {
-  const x = document.getElementById("input_x").value;
+  const x = +document.getElementById("input_x").value;
 
   document.getElementById("n16_result").value = (x * 16 * 0.031).toFixed(3);
   document.getElementById("n4_result").value = (x * 4 * 0.031).toFixed(3);
@@ -71,10 +71,10 @@ const calculate_N = () => {
 document.getElementById("input_x").addEventListener("input", calculate_N)
 // ************
 
-// СМЖ
+// КА
 const calculate_KA = () => {
-  const a = document.getElementById("input_a").value;
-  const b = document.getElementById("input_b").value;
+  const a = +document.getElementById("input_a").value;
+  const b = +document.getElementById("input_b").value;
 
   if (a && b) {
     document.getElementById("KA_result").value = ((a - b) / b).toFixed(0);
@@ -88,9 +88,9 @@ document.getElementById("input_b").addEventListener("input", calculate_KA)
 
 // ЛПНП
 const calculate_LPNP = () => {
-  const OXC = document.getElementById("input_OXC").value;
-  const LPVP = document.getElementById("input_LPVP").value;
-  const TG = document.getElementById("input_TG").value;
+  const OXC = +document.getElementById("input_OXC").value;
+  const LPVP = +document.getElementById("input_LPVP").value;
+  const TG = +document.getElementById("input_TG").value;
 
   if (OXC && LPVP && TG) {
     document.getElementById("LPNP_result").value = (OXC - (LPVP + TG / 2.2)).toFixed(1);
@@ -105,11 +105,13 @@ document.getElementById("input_TG").addEventListener("input", calculate_LPNP)
 
 // Фибриноген
 const calculate_F = () => {
-  const A2 = document.getElementById("input_A2").value;
-  const X2 = document.getElementById("input_X2").value;
+  const A2 = +document.getElementById("input_A2").value;
+  const X2 = +document.getElementById("input_X2").value;
 
   if (A2 && X2) {
-    document.getElementById("F_result").value = (A2 * 2.85 / X2).toFixed(1);
+    const tempValue = Math.floor(100 * 2.85 / X2) / 100;
+
+    document.getElementById("F_result").value = (A2 * tempValue).toFixed(1);
   } else {
     document.getElementById("F_result").value = "";
   }

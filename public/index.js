@@ -90,7 +90,6 @@ const calculate_KA = () => {
 
   if (a && b) {
     document.getElementById("KA_result").value = toDigits((a - b) / b, 2);
-    console.log((a - b) / b);
   } else {
     document.getElementById("KA_result").value = "";
   }

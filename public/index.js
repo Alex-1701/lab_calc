@@ -124,7 +124,7 @@ const calculate_F = () => {
   const X2 = +document.getElementById("input_X2").value;
 
   if (A2 && X2) {
-    const tempValue = toDigits(2.85, 2);
+    const tempValue = toDigits(2.85 / X2, 2);
     document.getElementById("F_result").value = (A2 * tempValue).toFixed(1);
   } else {
     document.getElementById("F_result").value = "";
